@@ -12,4 +12,6 @@ int main()
 	string text;
 	cout << "SHifr Cezarya\nVvedite shag sdviga: ";
 	cin >> shag;
+	cout << "Vvedite tekst dlya zashifrovki: ";
+	cin >> text;
 }
