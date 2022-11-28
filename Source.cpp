@@ -2,8 +2,6 @@
 #include <windows.h>
 #include <string>
 using namespace std;
-
-
 int main()
 {
 	SetConsoleCP(1251);
@@ -18,7 +16,8 @@ int main()
 			cout << "Vvedite shag: ";
 			cin >> shag;
 			cout << "Vvedite tekst dlya zashifrovki: ";
-			cin >> text;
+			cin.get();
+			getline(cin, text);
 			for (int i = 0; i < text.length(); i++) {
 				if ((text[i] > 64) and (text[i] < 123)) {			//изменение кода английских символов
 					text[i] += shag % 26;
@@ -33,7 +32,8 @@ int main()
 			cout << "Vvedite shag: ";
 			cin >> shag;
 			cout << "Vvedite tekst dlya rasshifrovki: ";
-			cin >> text;
+			cin.get();
+			getline(cin, text);
 			for (int i = 0; i < text.length(); i++) {
 				if ((text[i] > 64) and (text[i] < 123)) {			
 					text[i] -= shag % 26;							//теперь вычитаем шаг
