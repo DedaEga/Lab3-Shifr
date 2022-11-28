@@ -20,8 +20,14 @@ int main()
 			cout << "Vvedite tekst dlya zashifrovki: ";
 			cin >> text;
 			for (int i = 0; i < text.length(); i++) {
-
+				if ((text[i] > 64) and (text[i] < 123)) {			//изменение кода английских символов
+					text[i] += shag % 26;
+				}
+				else if ((text[i] > -65) and (text[i] < 1)) {		//изменение кода русских символов
+					text[i] += shag % 32;
+				}
 			}
+			cout << "Zashifrovannyj tekst: " << text << endl;
 		}
 		else if (choise == 2) {
 			cout << "Vvedite shag: ";
@@ -29,14 +35,21 @@ int main()
 			cout << "Vvedite tekst dlya rasshifrovki: ";
 			cin >> text;
 			for (int i = 0; i < text.length(); i++) {
-
+				if ((text[i] > 64) and (text[i] < 123)) {			
+					text[i] -= shag % 26;							//теперь вычитаем шаг
+				}
+				else if ((text[i] > -65) and (text[i] < 1)) {		
+					text[i] -= shag % 32;
+				}
 			}
+			cout << "Zashifrovannyj tekst: " << text << endl;
 		}
 		else if (choise == 3) {
 			break;
 		}
 		else {
-			cout << "Vvedeno nevernoe chislo, poprobujte eshchyo raz";
+			cout << "Vvedeno nevernoe chislo, poprobujte eshchyo raz\n";
 		}
+		choise = 0;
 	}	
 }
