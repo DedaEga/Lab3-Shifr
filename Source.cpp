@@ -46,7 +46,7 @@ int main()
 						}
 					}
 				}
-				else if ((text[i] > -33) and (text[i] < 0)) {		//изменение кода русских символов
+				else if ((text[i] > -33) and (text[i] < 0)) {
 					text[i] += shag % 32;
 					if ((text[i] < -32) or (text[i] > -1)) {
 						text[i] -= 32;
@@ -65,8 +65,8 @@ int main()
 			cin.get();
 			getline(cin, text);
 			for (int i = 0; i < text.length(); i++) {
-				if ((text[i] > 64) and (text[i] < 91)) {			//изменение кода английских символов
-					text[i] -= shag % 26;
+				if ((text[i] > 64) and (text[i] < 91)) {			
+					text[i] -= shag % 26;								//при расшифровке шаг вычитается
 					if ((text[i] < 65) or (text[i] > 90)) {
 						text[i] -= 26;
 						if ((text[i] < 65) or (text[i] > 90)) {
@@ -83,7 +83,7 @@ int main()
 						}
 					}
 				}
-				else if ((text[i] > -65) and (text[i] < -32)) {		//изменение кода русских символов
+				else if ((text[i] > -65) and (text[i] < -32)) {		
 					text[i] -= shag % 32;
 					if ((text[i] < -64) or (text[i] > -33)) {
 						text[i] -= 32;
@@ -92,7 +92,7 @@ int main()
 						}
 					}
 				}
-				else if ((text[i] > -33) and (text[i] < 0)) {		//изменение кода русских символов
+				else if ((text[i] > -33) and (text[i] < 0)) {		
 					text[i] -= shag % 32;
 					if ((text[i] < -32) or (text[i] > -1)) {
 						text[i] -= 32;
